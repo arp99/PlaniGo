@@ -36,7 +36,7 @@ To get the `GOOGLE_CLIENT_ID` follow below steps:
 8. For `Authorized redirect URIs` add 2 values: `http://localhost:3001/login` and `http://localhost` and press `Create`
 9. This would create a google Oauth credential for you and a modal would open copy the `Client ID` and paste in 2 places
 
-Replace value: [`REACT_APP_GOOGLE_OAUTH_CLIENT_ID`](/.env) <-- click
+Replace value: [`REACT_APP_GOOGLE_OAUTH_CLIENT_ID`](/.env) <-- click  
 Replace value: [`GOOGLE_CLIENT_ID`](/Server/.env) <-- click
 
 Now your setup should be completed 🤞
