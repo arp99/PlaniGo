@@ -1,0 +1,8 @@
+**node_modules**
+/build
+**.env
+/Server/logs
+**.DS_STORE
+
+package-lock.json
+Server/package-lock.json
