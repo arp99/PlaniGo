@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { SprintNav } from "../../components/SprintSideNav";
 import { NewSprintFormModal } from "./Components/NewSprintForm/NewSprintForm";
-import { TaskForm } from "./Components/TaskForm/TaskForm";
 import { SprintDetails } from "./Components/SprintDetails";
 import { MilestoneDetails } from "./Components/MilestoneDetails";
-import { TaskDetails } from "./Components/TaskDetails";
 import "./sprint.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -18,15 +16,12 @@ import { setCurrentSprintId } from "../../app/features/SprintPlanning/SprintPlan
 
 export const SprintPlanning = (props) => {
   const [showSprintCreationModal, setSprintCreationModal] = useState(false);
-  const [showMilestoneModal, setMilestoneModal] = useState(false);
-  const [showTaskModal, setShowtaskModal] = useState(false);
   const dispatch = useDispatch();
   const {
     sprintData,
     actionStatus,
     currentSprintId,
     currentSprintData,
-    currentMilestoneData,
   } = useSelector((state) => state.sprintPlanning);
   const { getSprintById } = actionStatus;
 

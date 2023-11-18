@@ -17,6 +17,19 @@
     z-index: 1;
 }
 
+.logout-btn {
+    border: 1px solid transparent;
+    background-color: rgba(234, 98, 86, 0.826);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: #f6f8f9;
+    transition: 0.5s;
+}
+
+.logout-btn:hover{
+    background-color: rgba(246, 53, 35, 0.826);
+}
+
 .milestone-details-container > .milestone-filter > .show > .dropdown-menu {
     transform: translate(0) !important;
 }

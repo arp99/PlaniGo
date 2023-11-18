@@ -17,7 +17,6 @@ export const SprintNav = (props) => {
   const [searchStr, setSearchStr] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("ENGINEERING");
   const [sprintDataState, setSprintDataState] = useState(null);
 
   const getFilteredSprints = (sprintData, searchStr) => {
@@ -27,33 +26,22 @@ export const SprintNav = (props) => {
   };
 
   useEffect(() => {
-    if(sprintData){
+    if (sprintData) {
       // const _sprintData = sprintData.filter(sprint => sprint.type === activeTab)
       setSprintDataState(sprintData);
     }
   }, [sprintData]);
 
-  const sprintTypeTabHandler = (tabType) => {
-    setActiveTab(tabType);
-
-    const _filteredSprints = sprintData.filter(
-      (sprint) => sprint.type === tabType
-    );
-    setSprintDataState(_filteredSprints);
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/";
   };
 
   return (
     <div className="sidenav-container sprint-nav">
-      <img
-        src={homeIcon}
-        className="home-icon"
-        onClick={() => {
-          console.log("CLEANED UP");
-          localStorage.removeItem("VIEWFILTERS");
-          localStorage.removeItem("FILTERSTATE");
-          navigate("/");
-        }}
-      />
+      <button className="logout-btn" onClick={logout}>
+        Logout
+      </button>
       <input
         placeholder="Enter sprint Name"
         className="sprint-nav-search"
@@ -62,7 +50,7 @@ export const SprintNav = (props) => {
       />
       <SprintFilter />
       {/* Show a tab to switch between Engineering and Internal tab  */}
-     
+
       <div className="all-sprints__container">
         <h1 className="sprint-title">Sprints</h1>
         {}
