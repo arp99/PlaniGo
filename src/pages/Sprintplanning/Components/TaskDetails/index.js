@@ -74,7 +74,7 @@ export const TaskDetails = ({ milestoneData, setViewFilters, viewFilters, filter
   const [showDeleteModal, setShowDeleteModal] = useState({ show: false });
   const [currentEditableTask, setEditableTask] = useState(null);
   const [toggleFullscreen, setToggleFullscreen] = useState(false);
-  const [searchStr, setSearchStr] = useState("");
+
   const initColumnState = [
     "NONE",
     "OWNER",

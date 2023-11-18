@@ -257,7 +257,7 @@ export const EditViewTaskModal = (props) => {
   return (
     <>
       {showExportModal && (
-        <ExportTaskModal show={showExportModal} setShow={setShowExportModal} />
+        <ExportTaskModal show={showExportModal} setShow={setShowExportModal} setShowTaskModal={setShowModal} />
       )}
 
       <div
